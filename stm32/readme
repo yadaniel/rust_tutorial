@@ -1,0 +1,19 @@
+# targets
+    thumbv6m-none-eabi, for Cortex M0 and M0+ devices.
+    thumbv7m-none-eabi, for Cortex M3 devices.
+    thumbv7em-none-eabi, for Cortex M4 and M7 devices. No FPU.
+    thumbv7em-none-eabihf, for Cortex M4 and M7 devices. With FPU.
+
+# add target to ./cargo/config
+
+# cargo build
+   target/debug
+   target/thumbv7em-none-eabihf/debug
+
+# cargo build --release
+   target/release
+   target/thumbv7em-none-eabihf/release
+
+# readelf -a <name>
+
+# TODO: cargo install cargo-binutils

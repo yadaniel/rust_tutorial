@@ -1,0 +1,9 @@
+[build]
+target = "thumbv7em-none-eabihf"
+
+# [target]
+# default = "thumbv6m-none-eabi"
+# default = "thumbv7m-none-eabi"
+# default = "thumbv7em-none-eabi"
+# default = "thumbv7em-none-eabihf"
+
