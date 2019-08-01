@@ -1,0 +1,23 @@
+[package]
+name = "stm32l432_example"
+version = "0.1.0"
+authors = ["yadaniel <ya.daniel@inbox.ru>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bare-metal = "0.2.4"
+cortex-m = "0.6.0"
+cortex-m-rt = "0.6.10"
+stm32l432xx-hal = "0.2.7"
+stm32l4 = "0.8.0"
+
+[profile.dev]
+# disable stack unwinding on panic
+panic = "abort"
+
+[profile.release]
+# disable stack unwinding on panic
+panic = "abort"
+

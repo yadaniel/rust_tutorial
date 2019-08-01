@@ -1,0 +1,34 @@
+[build]
+# target = "thumbv6m-none-eabi"
+# target = "thumbv7m-none-eabi"
+# target = "thumbv7em-none-eabi"
+target = "thumbv7em-none-eabihf"
+
+
+[target.thumbv7em-none-eabihf]
+runner = 'arm-none-eabi-gdb'
+rustflags = [
+  # "-C", "cpu=cortex-m4",
+  # "-C", "target-feature=-fp-only-sp",
+  # "-C", "link-arg=-Tlayout.ld",
+  # "-C", "link-arg=-nostartfiles",
+  # LLD (shipped with the Rust toolchain) is used as the default linker
+  "-C", "link-arg=-Tlink.x",
+
+  # if you run into problems with LLD switch to the GNU linker by commenting out
+  # "-C", "linker=arm-none-eabi-ld",
+
+  # if you need to link to pre-compiled C libraries provided by a C toolchain
+  # use GCC as the linker by commenting out both lines above and then
+  # uncommenting the three lines below
+  # "-C", "linker=arm-none-eabi-gcc",
+  # "-C", "link-arg=-Wl,-Tlink.x",
+  # "-C", "link-arg=-nostartfiles",
+]
+# rustflags = ["-C", "link-arg=-Tmemory_.x"]
+# rustflags = ["-C", "link-arg=-Tmemory.x"]
+# ar = "c:/GNU_Tools_ARM_Embedded/7_2018/bin/arm-none-eabi-ar.exe"
+# linker = "C:/GNU_Tools_ARM_Embedded/7_2018/bin/arm-none-eabi-ld.exe"
+# OR use
+# cargo rustc --target thumbv7m-none-eabi -- -C linker=arm-none-eabi-ld -C link-arg=-Tmemory.x
+#
