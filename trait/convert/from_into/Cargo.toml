@@ -1,0 +1,16 @@
+[package]
+name = "from"
+version = "0.1.0"
+authors = ["yadaniel <ya.daniel@inbox.ru>"]
+edition = "2018"
+
+# this is proposed only
+# [toolchain]
+# channel = "stable"
+# date = "2019-07-29"
+# host = "stable-x86_64-pc-windows-gnu"
+# use this
+# cargo +stable-x86_64-pc-windows-gnu build
+
+[dependencies]
+
