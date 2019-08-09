@@ -1,8 +1,28 @@
 #![allow(unused)]
 
+extern crate chrono;
+// use chrono;
+
 pub mod foo;
 
 use libstrings::{Anystr, concat, concat_str, concat_string};
+
+/// cargo run --features "with_colored"
+/// use =, not == 
+#[cfg(feature = "with_colored")]
+fn log(txt: String) {
+    extern crate colored;
+    use colored::*;
+    let timestamp = chrono::Utc::now().to_string();
+    println!("{}:{}", timestamp.green(), txt.blue().bold());
+}
+
+/// cargo run
+#[cfg(not(feature = "with_colored"))]
+fn log(txt: String) {
+    let timestamp = chrono::Utc::now().to_string();
+    println!("{}:{}", timestamp, txt);
+}
 
 fn main() {
     let f = foo::Foo::new(1,2,3);
@@ -12,15 +32,7 @@ fn main() {
 
     println!("{}", libstrings::strip_left("   some text".to_string()));
 
-    // let mut found = false;
-    // let mut s = String::new();
-    // for c in "   some text".chars() {
-    //     match c {
-    //         ' '|'\t' if !found => continue,
-    //         _ => { found = true; s.push(c); },
-    //     }
-    // }
-    // println!("{}", s);
-
+    // test feature
+    log("log text".to_string());
 }
 
