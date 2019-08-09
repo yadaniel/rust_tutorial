@@ -1,0 +1,11 @@
+[package]
+name = "using_rust_from_c"
+version = "0.1.0"
+authors = ["yadaniel <ya.daniel@inbox.ru>"]
+edition = "2018"
+
+[lib]
+name = "libfoo"
+crate-type = ["staticlib", "cdylib"]
+
+[dependencies]
