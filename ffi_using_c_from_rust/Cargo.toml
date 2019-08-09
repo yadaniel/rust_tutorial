@@ -1,0 +1,18 @@
+[package]
+name = "c_interop"
+version = "0.1.0"
+authors = ["yadaniel <ya.daniel@inbox.ru>"]
+edition = "2018"
+# build = "build.rs"
+
+# [lib]
+# name = "foo"
+# path = "./src"
+
+[dependencies]
+libc = "0.2.60"
+
+[build-dependencies]
+# cc = "1"
+# gcc = "0.3.55"
+
