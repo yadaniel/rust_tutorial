@@ -1,0 +1,23 @@
+[package]
+name = "cargo_default_bin"
+version = "0.1.1"
+authors = ["yadaniel <ya.daniel@inbox.ru>"]
+edition = "2015"
+# edition = "2018"
+default-run = "foobar"
+build = "build.rs"
+# build = false
+
+# [target.foo]
+# [target.bar]
+
+[dependencies]
+
+[build-dependencies]
+
+[profile.dev]
+[profile.release]
+[profile.test]
+[profile.bench]
+
+

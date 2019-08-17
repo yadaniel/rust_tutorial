@@ -1,0 +1,16 @@
+# mkdir
+mkdir examples
+
+# show available examples
+cargo build --example
+
+# build all examples
+cargo build --examples
+
+# build explicit
+cargo build --example foo
+cargo build --example bar
+
+# show executables
+ls -l target/debug/examples
+

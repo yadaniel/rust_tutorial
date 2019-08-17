@@ -1,0 +1,16 @@
+# mkdir
+mkdir tests
+
+# show available tests
+cargo build --test
+
+# build all tests
+cargo build --tests
+
+# build explicit test
+cargo build --test foo_test
+cargo build --test bar_test
+
+# show executables
+ls -l target/debug
+

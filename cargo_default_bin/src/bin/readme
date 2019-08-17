@@ -1,0 +1,27 @@
+# mkdir
+mkdir src/bin
+
+# shows available binaries
+cargo build --bin
+cargo run --bin
+
+# builds all
+cargo build
+cargo build --bins
+ls -l target/debug 
+
+# builds explicit
+cargo build --bin foo
+cargo build --bin bar
+cargo build --bin foobar
+
+# run default
+cargo run
+cargo run cargo_default_bin
+
+# runs explicit
+cargo run --bin foo
+cargo run --bin bar
+cargo run --bin foobar
+
+

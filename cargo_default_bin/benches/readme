@@ -1,0 +1,16 @@
+# mkdir
+mkdir benches
+
+# show available benches
+cargo build --bench
+
+# build all benches
+cargo build --benches
+
+# build explicit
+cargo build --bench foo_bench
+cargo build --bench bar_bench
+
+# show executables
+ls - target/debug
+
