@@ -7,3 +7,15 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+[target.'cfg(windows)'.dependencies]
+# winapi = { version = "0.3.5", features = ["winuser", "libloaderapi", "winbase", "commctrl", "sysinfoapi", "errhandlingapi"] }
+libc = "0.2.66"
+# winapi = "0.3.8"
+winapi = "0.2"
+user32-sys = "0.2.0"
+kernel32-sys = "0.2.2"
+
+# beep = "0.2.1"
+# dimensioned = "0.7.0"
+
